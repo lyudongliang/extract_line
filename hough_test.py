@@ -4,10 +4,10 @@ import time
 import os
 
 
-# type = 'home'
+type = 'home'
 # type = 'table'
 # type = 'window'
-type = 'office'
+# type = 'office'
 
 picture_file = type + '_corner.jpg'
 picture_directory = 'D:\data\picture'
