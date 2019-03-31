@@ -4,7 +4,10 @@ import time
 import os
 
 
-type = 'home'
+type = 'walk'
+# type = 'road'
+# type = 'niu'
+# type = 'home'
 # type = 'table'
 # type = 'window'
 # type = 'office'
@@ -20,9 +23,9 @@ time0 = time.time()
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-gray = cv2.GaussianBlur(gray, (3, 3), 0)
+gray = cv2.GaussianBlur(gray, (9, 9), 0)
 edges = cv2.Canny(gray, 30, 100, apertureSize=3)
-
+# edges = cv2.Sobel(gray, 30, 100, apertureSize=3)
 edge_file = type + '_corner_edge.jpg'
 
 cv2.imwrite(os.path.join('picture', edge_file), edges)
